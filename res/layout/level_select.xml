@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ImageView android:textSize="14.0pt" android:layout_gravity="center|left|top" android:id="@id/levelButtonBack" android:background="@android:color/transparent" android:padding="7.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/back_circle" android:scaleType="fitXY" />
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<TextView android:textSize="14.0pt" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/LevelTextTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="i:menus.singlePlayer.mapSelect.title" />
+		</LinearLayout>
+		<LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="#44ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<Spinner android:entries="@array/aidifficulty_array" android:layout_gravity="center" android:id="@id/aiDifficulty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:prompt="@string/aidifficulty_prompt" />
+			<Spinner android:entries="@array/skirmish_ai_count" android:layout_gravity="center" android:id="@id/aiCount" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:prompt="@string/skirmish_ai_count_prompt" />
+			<Spinner android:entries="@array/skirmish_game_mode" android:layout_gravity="center" android:id="@id/gameMode" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:prompt="@string/skirmish_game_mode_prompt" />
+		</LinearLayout>
+		<ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<LinearLayout android:orientation="vertical" android:id="@id/levelHolder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip" />
+			</LinearLayout>
+		</ScrollView>
+	</LinearLayout>
+</FrameLayout>

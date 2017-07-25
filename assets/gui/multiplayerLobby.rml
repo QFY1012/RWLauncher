@@ -1,0 +1,289 @@
+<html>
+	<head>
+		<title>Multiplayer</title>
+		<link rel="stylesheet" type="text/css" href="rkt.rcss"/>
+		<link rel="stylesheet" type="text/css" href="common.rcss"/>
+		<link type="text/rcss" href="forms.rcss"/>
+		<style>
+			
+			body
+			{
+				width: 100%;
+				
+				height: 80%;
+				
+		  }
+			
+			.mainButtons
+			{
+			  margin: auto;
+			  /*width:24em;*/
+			  
+			}
+			
+			.formSection
+			{
+			  float:left;
+			  
+			  border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;
+			  
+			  width:7em;
+			  
+			  
+			  
+			  margin:2px;
+			  
+			  /*margin: 0 auto;*/
+			  
+			  
+			  
+			  
+	      
+			}
+		  
+			.joinSection input, .joinSection p
+			{
+			  font-size: 20;
+			}
+			
+			.joinSection p
+			{
+			  
+			  
+			}
+			
+			.joinSection input
+			{
+			  display:block;
+			  margin: 0 auto;
+			  text-align:center;
+			  
+			}
+			
+			
+			#joinAddress
+			{
+			  width:9em;
+			  
+			}
+			
+			.topSection
+			{
+			  width:15em; /* because fit is not working */
+			  margin: 0 auto;
+			}
+			
+			
+			.serverList
+			{
+			  font-size: 18;
+			  
+			  /*border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;*/
+			}
+			
+			.serverRow
+			{
+			  /*border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;*/
+			  
+			  /*white-space: nowrap;*/ /*affects overflow hidden :(*/
+			  
+			  
+			  /*width:50px;
+			  overflow: hidden;*/
+			  
+			}
+			
+			.serverRowHeader
+			{
+			  font-weight:bold;
+			  background:rgba(200,200,200,98);
+			}
+			
+			.serverRowData
+			{
+			  background:rgba(100,100,100,58);
+			}
+			
+			.serverRowData:hover
+			{
+			  background:rgba(200,0,0,48);
+			  border-color:rgba(200,0,0,255);
+			}
+			
+			.serverRow .cell
+			{
+			  border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;
+			  /*padding:2px;*/
+			  
+			   
+			  overflow-x: hidden;
+			  overflow-y: hidden;
+			  
+			  
+			  width:16.5%;
+			  height:1.25em;
+			  
+			  /*width:40px;
+			  height:40px;*/
+			  
+			  /*float:left;*/
+			  margin-right:-1px;
+			  
+			  display: inline-block;
+			 
+			  /*position:relative;*/
+			}
+			
+			.serverRow .cell.rPlayers
+			{
+			  width:7.5%;
+			}
+			
+			.serverRow .cell.rVersion
+			{
+			  width:8.5%;
+			}
+			
+			.serverRow .cell.rPing,
+			.serverRow .cell.rOpen
+			{
+			  width:8.5%;
+			}
+			
+			.serverRow .cell.rMap
+			{
+			  width:41.5%; /* 16.5+((16.5×3)−7.5−8.5−8.5) */
+			}
+			
+      .panelMain
+      {
+        max-height:100%;
+        float:left;
+        
+      }
+      
+      #serverScrollDiv
+      {
+        
+        display:block;
+        
+        overflow-y: auto;
+        
+        min-height:250px;
+        
+        max-height:430px;
+        
+        /*max-height:80%;*/
+        
+        width:100%;
+        /*
+        border-style: solid;
+        border-width: 2px;
+        border-color: red;
+        */
+        
+        /*margin: 3px;
+        padding: 3px;*/
+        
+      }
+      
+      #username
+      {
+        text-align:center;
+        font-size: 18;
+      }
+
+		</style>
+	</head>
+	<body onshow="onShowNewScreen(); mp.loadUsername(); refreshServerList('serverListData','serverRowTemplateHolder')">
+		
+		<div class="panelMain">
+		  <div class="mainButtons">
+		  
+		    <div class="centerDivOuter topSection">
+		      <div class="centerDiv">
+	          
+	          <input id="username" type="text" name="username" value="Unnamed" onblur="mp.getUsernameFromInterface();"/>
+	          
+	          <div class="formSection joinSection">
+	            <!--<p>Join:</p>  -->
+	            <!--<input id="joinAddress" type="text" name="joinIp" value="127.0.0.1"/>
+	            <button onclick="joinServer(getValueById('joinAddress'))">Join</button><br />-->
+	            
+	            <button onclick="directJoinPopup()">Direct Join</button>
+	          </div>
+	          
+	          <div class="formSection hostSection">
+	            <!--<button onclick="host()">Host</button>-->
+	            <button onclick="showHostOptions()">Host</button>
+	            
+	          </div>
+	          
+	          
+	        </div>
+	      </div>
+	      
+	      <div class="clearDiv"></div>
+		    
+		    <div class="serverList">
+		      <div class="serverRow serverRowHeader">
+		        <div class="cell rState">State</div>
+		        <div class="cell rHost">Host</div>
+		        <div class="cell rPlayers">#</div>
+		        <div class="cell rMap">Map</div>
+		        <div class="cell rVersion">Version</div>
+		        <div class="cell rOpen">Open</div>
+		      </div>
+		      
+		      
+		      
+		      <div id="serverScrollDiv">
+		        
+		        <div id="serverListData">
+		          <div class="serverRow serverRowData">
+		            <div class="rMessage">...</div>
+		          </div>
+		          
+		          
+		        </div>
+		        
+		      </div>
+		      
+		    </div>
+		    
+		    <div id="serverRowTemplateHolder" style="display:none;">
+	        <div class="serverRow serverRowData">
+	          <div class="cell rState">1</div>
+	          <div class="cell rHost">2</div>
+	          <div class="cell rPlayers">0/8</div>
+	          <div class="cell rMap">4</div>
+	          <div class="cell rVersion">5</div>
+	          <div class="cell rOpen">6</div>
+	        </div>
+		    </div>  
+		         
+		    
+		    
+		    <button onclick="refreshServerList('serverListData','serverRowTemplateHolder')">Refresh</button><br />
+	      
+	      <button onclick="open('mainMenu.rml')">Back</button><br />
+	      
+	      
+	    
+	    </div>
+
+		
+		
+		</div>
+		
+		
+	</body>
+</html>

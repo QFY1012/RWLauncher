@@ -1,0 +1,170 @@
+<rml>
+	<head>
+		<title>Settings</title>
+		<link type="text/rcss" href="rkt.rcss"/>
+		<link type="text/rcss" href="common.rcss"/>
+		<link type="text/rcss" href="forms.rcss"/>
+		<style>
+			
+			.background
+      {
+        background:rgba(205,205,205,120);
+        
+        padding:8px;
+        padding-right:25px;
+      }
+      
+      
+		  h2
+	    {
+	      font-size: 35;
+        font-weight:bold;
+	    }
+	
+      h3
+      {
+        font-size: 30;
+	      color:black;
+	      font-weight:bold;
+	      
+	      header-font-effect: shadow;
+	      
+	      header-width: 2px;
+	      
+        header-offset: 2px 2px;
+        header-color: gray;
+        
+        display:block;
+        
+        border-bottom: 3px rgba(0,0,0,128);
+        
+        padding-left:0.4em;
+        
+        margin-bottom:0.5em;
+        margin-top:0.5em;
+        
+        background:rgba(0,100,0,128);
+        
+      }
+			
+			.group
+			{
+			  padding-left:0.5em;
+			  
+			}
+			
+			
+			div
+			{
+			  /*border-style: solid;
+	      border-width: 1px;
+	      border-color: red;*/
+			}
+			
+			
+			.form
+			{
+			  text-align: left;
+			  display: block;
+			  
+			  text-color:black;
+			}
+			
+		  body
+	    {
+		    /*width: 680px;*/
+		    
+		    width: 80%;
+		    height: 525px;
+		    /*height: 100%;*/
+		    
+		    
+		    font-size: 25;
+		  }
+		  
+			label
+			{
+			  padding-bottom:0em;
+			  margin-top:0em;
+			  
+			  /*border-style: solid;
+			  border-width: 2px;
+			  border-color: green;*/
+			  
+			  /*display:inline-block;*/
+			  
+        /*vertical-align:middle; */
+        
+			}
+			
+			
+      #scrollDiv
+      {
+        
+        display:block;
+			  
+			  overflow-y: auto;
+			  
+			  min-height:250px;
+			  max-height:470px;
+			  
+			  width:100%;
+			  /*
+			  border-style: solid;
+			  border-width: 2px;
+			  border-color: red;
+			  */
+			  
+			  margin: 3px;
+			  padding: 3px;
+			  
+      }
+      
+      .mainButtons button
+	    {
+	      margin:6px;
+	    }
+      
+		</style>
+	</head>
+	<body id="body">
+		
+		
+		<div class="panelMain">
+		  <div class="mainButtons">
+		    
+		    <div id="scrollDiv">
+		      
+		      <h2>Help</h2>
+	        <form class="form">
+	          
+	          <h3>TODO</h3>
+	          <div class="group">
+	          
+	            <p>Some help text will go here</p>
+	            
+	          </div>
+	          <h3>Test</h3>
+	          <div class="group">
+	            
+	          </div>
+	        </form>
+		      
+		      <br/>
+		      
+	        
+	      </div>
+	      
+	      <button class="stealFocus"></button>
+	      
+	      <button onclick="open('credits.rml', null)">Credits</button>
+	      
+	      <button onclick="back()">Back</button>
+	      
+		  </div>
+		  
+		  
+		</div>
+		
+	</body>
+</rml>

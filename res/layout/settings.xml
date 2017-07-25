@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/backrepeat" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:text="i:menus.settings.heading.audio" style="@style/SettingsHeader" />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingsSectionGroup">
+				<CheckBox android:id="@id/SettingsEnableSounds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="i:menus.settings.option.enableGameSounds" />
+				<Button android:id="@id/settingsConfKeys" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Configure Keyboard" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="i:menus.settings.option.musicVolume" />
+				<TextView android:id="@id/musicVolumeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="xx%" />
+				<SeekBar android:id="@id/musicVolume" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:maxWidth="300.0dip" android:max="100" android:progress="50" />
+			</LinearLayout>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:text="i:menus.settings.heading.gameplay" style="@style/SettingsHeader" />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingsSectionGroup">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="i:menus.settings.option.aiDifficulty" />
+				<Spinner android:entries="@array/aidifficulty_array" android:id="@id/aiDifficulty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:prompt="@string/aidifficulty_prompt" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="i:menus.settings.option.scrollSpeed" />
+				<TextView android:id="@id/scrollSpeedText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="xx%" />
+				<SeekBar android:id="@id/scrollSpeed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:maxWidth="300.0dip" android:max="400" android:progress="70" />
+				<CheckBox android:id="@id/settingsShowUnitGroups" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.unitGroupInterface" />
+				<CheckBox android:id="@id/settingsGestureZoom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.zoomGesture" />
+				<CheckBox android:id="@id/settingsUseCircleSelect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.useCircleSelect" />
+				<CheckBox android:id="@id/settingsMouseSupport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.mouseSupport" />
+				<CheckBox android:id="@id/settingsKeyboardSupport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.keyboardSupport" />
+				<CheckBox android:id="@id/settingsForceEnglish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.forceEnglish" />
+			</LinearLayout>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:text="i:menus.settings.heading.graphics" style="@style/SettingsHeader" />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingsSectionGroup">
+				<CheckBox android:id="@id/settingsBatterySaving" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.batterySaving" />
+				<CheckBox android:id="@id/settingsShowUnitWaypoints" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.showUnitWaypoints" />
+				<CheckBox android:id="@id/settingsShowHp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.alwayUnitHealth" />
+				<CheckBox android:id="@id/settingsShowUnitIcons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.unitIcons" />
+				<CheckBox android:id="@id/settingsZoomButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.zoomButton" />
+				<CheckBox android:id="@id/settingsImmersiveFullScreen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.immersiveFullScreen" />
+				<CheckBox android:id="@id/settingsRenderDoubleScale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.halfResolution" />
+			</LinearLayout>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:text="i:menus.settings.heading.developer" style="@style/SettingsHeader" />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingsSectionGroup">
+				<CheckBox android:id="@id/settingsShowFps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.showFps" />
+				<CheckBox android:id="@id/settingsSendReports" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.sendReports" />
+				<CheckBox android:id="@id/settingsAllowGameRecording" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.videoRecord" />
+			</LinearLayout>
+			<CheckBox android:id="@id/settingsRenderBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Render Background" />
+			<CheckBox android:id="@id/settingsRenderExtraLayers" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Render Extra Layers" />
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:text="i:menus.settings.heading.networking" style="@style/SettingsHeader" />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingsSectionGroup">
+				<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Port Number (default=5123): " />
+					<EditText android:layout_gravity="center_vertical" android:id="@id/settingsNetworkPort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:inputType="number" android:imeOptions="flagNoExtractUi" />
+				</LinearLayout>
+				<CheckBox android:id="@id/settingsUdpInMultiplayer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="i:menus.settings.option.udpInMultiplayer" />
+				<CheckBox android:id="@id/settingsSaveMultiplayerReplays" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="i:menus.settings.option.saveReplays" />
+			</LinearLayout>
+			<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px">
+				<Button android:textSize="16.0sp" android:id="@id/settingsDone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="i:menus.settings.button.done" style="@style/SettingsMainButtons" />
+				<Button android:textSize="16.0sp" android:id="@id/settingsCancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="i:menus.settings.button.cancel" style="@style/SettingsMainButtons" />
+				<Button android:textSize="16.0sp" android:id="@id/settingsCredits" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="i:menus.settings.button.credits" style="@style/SettingsMainButtons" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

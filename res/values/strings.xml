@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="onscreenlocationaction_prompt">Action Location</string>
+<string name="onscreenlocationdpad_prompt">Dpad Location</string>
+<string name="aidifficulty_prompt">AI Difficulty</string>
+<string name="fog_prompt">Fog Mode</string>
+<string name="credits_prompt">Starting Credits</string>
+<string name="skirmish_game_mode_prompt">Game Mode</string>
+<string name="skirmish_ai_count_prompt">Number of AIs</string>
+<string name="app_name">Rusted Warfare</string>
+</resources>

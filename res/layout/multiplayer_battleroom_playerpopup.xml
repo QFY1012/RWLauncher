@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#ff000000" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spawn point:" />
+				<EditText android:id="@id/teamId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="2" android:inputType="number" />
+			</LinearLayout>
+			<TextView android:layout_gravity="center_vertical" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The spawn point controls where on the map this players starts. Players with the same spawn point will share control of the same units." />
+			<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Team:" />
+				<EditText android:id="@id/teamAllyGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="2" android:inputType="number" />
+			</LinearLayout>
+			<TextView android:layout_gravity="center_vertical" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Players with the same team will be allied together." />
+			<LinearLayout android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<Button android:id="@id/battleroom_playerpopup_apply" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="i:menus.battleroom.playerpopup.apply" />
+				<Button android:id="@id/battleroom_playerpopup_kick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="i:menus.battleroom.playerpopup.kick" />
+				<Button android:id="@id/battleroom_playerpopup_give" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="i:menus.battleroom.playerpopup.give" />
+				<Button android:id="@id/battleroom_playerpopup_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="i:menus.battleroom.playerpopup.cancel" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<!--
+<!DOCTYPE html>
+-->
+<div>
+
+  <input class="hide" id="team_id" type="hidden" />
+  
+
+  <div class="selectDiv">
+    <label>Spawn Point</label>
+    <select id="spawnPoint" data-settings>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+  </div>
+  
+  <div class="selectDiv">
+    <label>Ally Team</label>
+    <select id="allyTeam" data-settings>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+  </div>
+  <p>Players with the same team will be allied together.</p>
+  
+  
+  <div class="mainButtons">
+    
+    <button id="button_apply" onclick="mp.playerConfig_apply(); closePopup();">${i:menus.battleroom.playerpopup.apply}</button>
+    
+    <button id="button_kick"  onclick="mp.playerConfig_kick(); closePopup();">${i:menus.battleroom.playerpopup.kick}</button>
+    
+    <div class="hide">
+      <button id="button_give"  onclick="">${i:menus.battleroom.playerpopup.give}</button>
+    </div>
+    
+    <button id="button_back"  onclick="closePopup();">${i:menus.battleroom.playerpopup.cancel}</button>
+    
+  </div>
+
+
+</div>
+
+

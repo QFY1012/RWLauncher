@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="MenuButton" parent="@android:style/Widget.Button"><item name="android:textSize">16.0dip</item><item name="android:textStyle">bold</item><item name="android:textColor">#ffffffff</item><item name="android:gravity">center</item><item name="android:background">@drawable/custombutton</item><item name="android:focusable">true</item><item name="android:clickable">true</item><item name="android:shadowColor">#ff000000</item><item name="android:shadowDx">0.0</item><item name="android:shadowDy">-1.0</item><item name="android:shadowRadius">0.2</item></style>
+<style name="LevelButton" parent="@android:style/Widget.Button"><item name="android:textSize">16.0dip</item><item name="android:textStyle">bold</item><item name="android:textColor">#ffffffff</item><item name="android:gravity">center</item><item name="android:focusable">true</item><item name="android:clickable">true</item><item name="android:shadowColor">#ff000000</item><item name="android:shadowDx">0.0</item><item name="android:shadowDy">-1.0</item><item name="android:shadowRadius">0.2</item></style>
+<style name="SettingsHeader" parent="@android:style/TextAppearance.Widget.TextView"><item name="android:textSize">16.0sp</item><item name="android:textStyle">bold</item><item name="android:textColor">#ff42e347</item><item name="android:background">#ff626363</item><item name="android:paddingLeft">55.0dip</item><item name="android:paddingTop">2.0dip</item><item name="android:paddingRight">55.0dip</item><item name="android:paddingBottom">2.0dip</item><item name="android:minWidth">250.0dip</item></style>
+<style name="SettingsSectionGroup"><item name="android:padding">10.0dip</item></style>
+<style name="SettingsMainButtons"><item name="android:padding">10.0dip</item></style>
+<style name="CustomButton" parent="@android:style/Theme.NoTitleBar"><item name="android:buttonStyle">@style/MenuButton</item></style>
+<style name="app_theme" parent="@android:style/Theme.Light" />
+</resources>

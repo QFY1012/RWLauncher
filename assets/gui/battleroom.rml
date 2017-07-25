@@ -1,0 +1,615 @@
+<rml>
+	<head>
+		<title>Multiplayer - Battleroom</title>
+		<link type="text/rcss" href="rkt.rcss"/>
+		<link type="text/rcss" href="common.rcss"/>
+		<link type="text/rcss" href="forms.rcss"/>
+		<style>
+			
+			body
+			{
+				width: 100%;
+				
+				
+				/*height:100%;*/
+		  }
+			
+
+			
+			
+			.mainButtons
+			{
+			  
+			  /*margin: auto;*/
+			  /*width:15em;*/
+			  /*width:35em;*/
+			  
+			}
+			
+      .mainButtons button
+	    {
+	      margin:10px;
+	    }
+	    
+			.formSection
+			{
+			  /*float:left;*/
+			  
+			  border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;
+			  
+			  
+			  width:7em;
+			  margin:2px;
+			  
+			  margin: 0 auto;
+			}
+			
+			.panelSection
+			{
+			  border-style: solid;
+			  border-width: 0px;
+			  border-color: gray;
+		  }
+		  
+			.joinSection input, .joinSection p
+			{
+			  font-size: 20;
+			}
+			
+			.joinSection p
+			{
+			  
+			  
+			}
+			
+			.joinSection input
+			{
+			  display:block;
+			  margin: 0 auto;
+			  text-align:center;
+			  
+			}
+			
+			
+			#joinAddress
+			{
+			  width:9em;
+			  
+			}
+			
+			
+			body
+			{
+			  color:white;
+		    
+		    background-decorator: tiled-box;
+        background-left-image-src: drawable:metal_dark.png;
+		    background-left-image-repeat: repeat-truncate;
+		    
+		    background-center-image-src: drawable:metal_dark.png;
+		    background-center-image-repeat: repeat-truncate;
+		    
+		    background-bottom-image-src: drawable:metal_dark.png;
+		    background-bottom-image-repeat: repeat-truncate; 
+			  
+			  width:100%;
+			  height:100%;
+			}
+			
+			.shadow_outer /*.background*/
+			{
+			  margin:30px;
+			  
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			.tableList
+			{
+			  
+			  border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;
+			  
+			  /*margin-right:1px;*/
+			  
+			  /*width: 100%;*/
+			  
+			  
+			  
+			}
+			
+			.tableRow
+			{
+			  /*border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;*/
+			  
+			  /*white-space: nowrap;*/ /*affects overflow hidden :(*/
+			  
+			  
+			  /*width:50px;
+			  overflow: hidden;*/
+			  
+			  /*margin-left:-2px;*/
+			  /*margin-right:-1px;*/
+			  
+			  
+			  
+			}
+			
+			.tableRowHeader
+			{
+			  font-weight:bold;
+			  background:rgba(200,200,200,98);
+			}
+			
+			.tableRowData
+			{
+			  background:rgba(100,100,100,58);
+			}
+			
+			.tableRowData:hover
+			{
+			  background:rgba(200,0,0,48);
+			  border-color:rgba(200,0,0,255);
+			}
+			
+			.tableRow .cell
+			{
+			  border-style: solid;
+			  border-width: 1px;
+			  border-color: gray;
+			  /*padding:2px;*/
+			  
+			  border-left-width: 0px;
+			  border-top-width: 0px;
+			   
+			  overflow-x: hidden;
+			  overflow-y: hidden;
+			  
+			  
+			  /*width:24.6%;*/
+			  width:25%;
+			  
+			  
+			  
+			  height:1.25em;
+			  
+			  /*width:40px;
+			  height:40px;*/
+			  
+			  /*float:left;*/
+			  
+			  margin-right:-1px;
+			  /*margin-left:-1px;*/
+			  
+			  /*margin-left:-1px;*/
+			  
+			  display: inline-block;
+			 
+			  /*position:relative;*/
+			  
+			  
+			}
+			
+			/* debug */
+			.template
+			{
+			  background:red;
+			  
+			  border-style: solid;
+			  border-width: 2px;
+			  border-color: red;
+			}
+			/*
+			div
+			{
+			  border-style: solid;
+			  border-width: 1px;
+			  border-color: red;
+			  
+			  margin:2px;
+			  padding: 2px;
+			}
+			*/
+			
+			
+			/*
+			.tableRow .cell.rPlayers
+			{
+			  width:7.5%;
+			}
+			
+			.tableRow .cell.rVersion
+			{
+			  width:8.5%;
+			}
+			
+			.tableRow .cell.rPing,
+			.tableRow .cell.rOpen
+			{
+			  width:8.5%;
+			}
+			
+			.tableRow .cell.rMap
+			{
+			  width:41.5%;
+			}
+      */
+      /*
+      .cell
+      {
+        border-style: solid;
+			  border-width: 1px;
+			  
+        border-color: red;
+        margin:2px;
+        
+        background:green;
+      }
+      */
+      
+      
+      
+      #tableScrollDiv
+      {
+        
+        display:block;
+        
+        overflow-y: auto;
+        
+        min-height:190px;
+        max-height:350px;
+        
+        width:100%;
+        /*
+        border-style: solid;
+        border-width: 2px;
+        border-color: red;
+        */
+        
+        /*margin: 3px;*/
+        /*padding: 3px;*/
+        
+      }
+      
+      
+      .playersDiv
+      {
+        margin: 10px;
+        font-size: 18;
+        /*width:700px;*/
+        
+        
+      }
+      
+      
+      
+     .infoDiv
+     {
+       font-size: 18;
+       white-space: pre-wrap;
+       
+       line-height:1.0;
+       
+       /*width:90%;*/
+       /*margin:auto;*/
+       
+       
+       margin:7px;
+       margin-right:18px;
+       
+       /*width:90%;*/
+       
+       /*min-height:60px;*/
+       
+       height:0;
+       overflow-y: visible;
+       
+       
+       text-align:right;
+       
+       /*position:absolute;*/
+       
+       /*color:rgba(255,255,255,188);*/
+       
+       z-index:2;
+     }
+     
+     .map
+     {
+       text-align:center;
+       margin-top:30px;
+       
+       
+     }
+     
+     
+     .mapImage
+     {
+       border-style: solid;
+			 border-color: rgba( 0%, 0%, 0%, 20%);
+			 border-width: 2px;
+       
+       /*width:180px;*/
+       
+       /*max-width:230px;
+			 
+			 min-height:160px;*/
+       
+			 
+			 width:190px;
+			 max-height:200px;
+     }
+     
+     
+     
+
+
+    .contentWrap
+    {
+      padding-left:15px;
+    }
+
+    .gameOptionsDiv
+    {
+      text-align:center;
+      
+    }
+	  
+	  .chatBoxMinimize
+	  {
+	    background-decorator: image;
+	    background-image: button-minimize.png;
+	    width:50px;
+	    height:50px;
+	    
+	    display:block;
+	    
+	    display:none;
+	    
+	    color: rgba( 100%, 100%, 100%, 100%);
+	    
+	    position:absolute;
+	    top:-10px;
+	    /*right:60px;*/
+	    /*right:50%;*/
+	    right:60px;
+	  }
+	  
+	  .chatBoxMinimize:hover
+	  {
+	    margin-top:1px;
+	    margin-left:1px;
+	    
+		  width:48px;
+	    height:48px;
+	    
+	  }
+	  
+	  
+	  
+    .chatBox
+    {
+      padding:20px;
+      position:absolute;
+      right:0;
+      bottom:0;
+      
+      width:40%;
+      
+    }
+    
+    
+    .chatSendBox
+    {
+      font-size: 20;
+      
+      /*border-style: solid;
+		  border-width: 1px;
+		  border-color: rgba( 50%, 50%, 50%, 50%);*/
+      
+    }
+    
+     #chatMessage
+     {
+       width:14em;
+       width:100%;
+       
+       /*
+       margin-top:0;
+       
+       height: 45px;
+       padding: 9px 10px 0px 10px;
+       
+       padding: 0;
+       margin: 0;
+       height: 20px;
+       */
+       
+       
+       
+     }
+     
+    #chatLog
+    {
+      border-style: solid;
+		  border-width: 1px;
+		  /*border-color: gray;*/
+		  border-color: rgba( 50%, 50%, 50%, 50%);
+		  
+		  
+		  font-size: 18;
+		  
+		  width:80%;
+		  
+    }
+    
+    
+    #chatLogHistory
+    {
+      font-size: 18;
+      text-align:left;
+      
+      
+      min-height:180px;
+      max-height: 180px;
+      overflow-y: scroll;
+      
+      padding:3px;
+    }
+      
+    .chatTitle
+    {
+      height:16px;
+      margin-top:-16px;
+      
+      /*color:black;*/
+      
+      text-align:center;
+      /*font-weight:bold;*/
+      
+      /*header-font-effect: shadow;*/
+      /*header-font-effect: outline;
+      
+      header-color: gray;*/
+      
+      overflow:visible;
+      
+      font-size: 18;
+      
+      z-index:3;
+    }
+    
+		.chatBox #chatLog
+		{
+		  width:auto;
+		  margin-right:28px;
+		}
+			
+		</style>
+	</head>
+	<body onshow="mp.battleroomSetup()">
+		
+		<!--<div class="shadow_outer"><div class="shadow_inner">-->
+		
+		<div class="" style="padding:7px;"><div class="">
+		  <div class="panelMain">
+		    <div class="contentWrap mainButtons2">
+		      
+		      
+	        <div class="infoDiv" id="infoDiv">
+	          ...
+	        </div>
+	      
+		      <div class="map">
+		        <img id="mapImage" class="mapImage" _src="" />
+		      </div>
+		      
+		      <div class="forHostOnly mainButtons gameOptionsDiv" style="display:none;">
+	           <button onclick="createAndShowPopup('battleroom_gameoptions.rml', null, 'Game Options'); mp.gameOptionsGet();">Game Options</button>
+		      </div>
+		      
+		      <div class="forHostOnly">
+		      
+		        <div class="optionsDiv hide">
+		          
+		          <div class="selectDiv bigger mapsSelectorWrap">
+              <label>Map:</label>
+              <select id="mapsSelector">
+              </select>
+              </div>
+		          
+		        </div>
+		      
+		      </div>
+		      
+		      <div class="playersDiv" id="playersDiv">
+		        <div class="center">
+		        <h3 class="hide">Players</h3>
+		        </div>
+		        <div class="tableList">
+		          <div class="tableRow tableRowHeader">
+		            <div class="ctext cell rName">${i:menus.battleroom.heading.name}</div>
+		            <div class="ctext cell rSpawnPoint">${i:menus.battleroom.heading.spawnPoint}</div>
+		            <div class="ctext cell rTeam">${i:menus.battleroom.heading.team}</div>
+		            <div class="ctext cell rPing">${i:menus.battleroom.heading.ping}</div>
+		          </div>
+		          
+		          <div id="tableScrollDiv">
+		            <div id="tableListData">
+		              <div class="tableRow tableRowData">
+		                <div class="cell rName">1</div>
+	                  <div class="cell rSpawnPoint">2</div>
+	                  <div class="cell rTeam">3</div>
+	                  <div class="cell rPing">4</div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		        <div id="tableRowTemplateHolder" style="display:none;">
+	            <div class="rowTemplate template">
+	              <div class="tableRow tableRowData"></div>
+	            </div>
+	            
+	            <div class="cellTemplate template">
+	              <div class="ctext cell"></div>
+	            </div>
+		        </div>
+		        
+		        
+		      </div>
+		      
+		      <div class="mainButtons center forHostOnly">
+	          <button onclick="mp.addAI()">+New AI</button>
+	        </div>
+	         
+	        
+	        
+	        <div class="formSection_na panelSection_na mainButtons center">
+	          <button onclick="mp.multiplayerBackPrompt()">Back</button>
+	          
+		        <span class="forHostOnly" style="display:none;">
+	              <button onclick="mp.multiplayerStart()">Start</button>
+	          </span>
+	          
+	        </div>
+	      
+	      </div>
+		
+		  </div> <!-- background -->
+		</div></div> <!-- end shadow -->
+		
+		
+    <div class="chatBox panelSection" id="chatBox">
+      <button class="chatBoxMinimize hide" onclick="alert('test')"></button>
+      
+      <div class="ctext chatTitle">
+        <p>--Chat--</p>
+      </div>
+      <div id="chatLog">
+        <div id="chatLogHistory">
+        </div>
+      </div>
+      
+      <div id="chatLogRowTemplate">
+      </div>
+      
+      
+      <div class="chatSendBox">
+        <input id="chatMessage" type="text" name="chatMessage" value="" onenter="sendChatMessage(getValueById('chatMessage')); setValueById('chatMessage','')" />
+        <!--<button onclick="sendChatMessage(getValueById('chatMessage')); setValueById('chatMessage','')">Send</button>-->
+      </div>
+    </div>
+		
+	</body>
+</rml>

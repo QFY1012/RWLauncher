@@ -1,0 +1,175 @@
+<rml>
+	<head>
+		<title>Settings</title>
+		<link type="text/rcss" href="rkt.rcss"/>
+		<link type="text/rcss" href="common.rcss"/>
+		<style>
+			
+			.form
+			{
+			  text-align: left;
+			  display: block;
+			  
+			  text-color:black;
+			}
+			
+			label
+			{
+			  padding-bottom:0em;
+			  margin-top:0em;
+			  
+			  /*border-style: solid;
+			  border-width: 2px;
+			  border-color: green;*/
+			  
+			  /*display:inline-block;*/
+			  
+        /*vertical-align:middle; */
+        
+			}
+			
+			
+			input.checkbox
+      {
+        
+      }
+      
+			.checkboxDiv
+			{
+			  
+			  height:55px;
+			  
+			}
+			
+      #scrollDiv
+      {
+        
+        display:block;
+			  
+			  overflow-y: auto;
+			  
+			  min-height:250px;
+			  max-height:470px;
+			  
+			  width:100%;
+			  /*
+			  border-style: solid;
+			  border-width: 2px;
+			  border-color: red;
+			  */
+			  
+			  padding: 7px;
+        
+      }
+      
+      .sliderDiv
+      {
+        margin-top:13px;
+      }
+      
+      .sliderDiv label
+      {
+        float:left;
+        width:3em;
+			  
+			  margin-top:-13px;
+      }
+      .sliderDiv input
+      {
+        width: 200px;
+      }
+      
+      
+      .selectDiv
+      {
+        margin-top:0px;
+        
+      }
+      
+      .selectDiv label
+      {
+        float:left;
+        width:2em;
+			  
+			  margin-top:9px;
+			  
+      }
+      
+      
+		</style>
+	</head>
+	<body onload="">
+		
+		
+		<div class="background">
+		  <div class="mainButtons">
+		    
+		    <div id="scrollDiv">
+		      
+		      <h2>Settings</h2>
+	        <form class="form">
+	          
+	          <input type="text" name="test" value="test123"/>
+	          
+	          <div class="sliderDiv">
+	          <label>Slider: </label><input id="sound_master" type="range" min="0" max="100" value="100" />
+	          </div>
+	          
+	          <div class="sliderDiv">
+	          <label>Music: </label><input id="sound_music" type="range" min="0" max="100" value="100" />
+	          </div>
+	          
+	          <div class="checkboxDiv">
+	            <input type="checkbox" name="test2" id="test2"><label for="test2">checkbox</label></input>
+	          </div>
+	          
+	          <div class="selectDiv">
+	          <label>Test:</label>
+	          <select name="graphics">
+	            <option value="bad">Bad</option>
+	            <option value="ok">OK</option>
+	            <option value="good" selected>good</option>
+            </select>
+	          </div>
+	          
+	          <input type="checkbox" name="test3" id="test3"><label for="test2">checkbox2</label></input>
+	          
+	          <div class="selectDiv">
+	          <label>AI:</label>
+	          <select name="ai" id="ai">
+	            <option value="-1">Easy</option>
+	            <option value="0" selected>Normal</option>
+	            <option value="1">Hard</option>
+            </select>
+	          </div>
+	          
+	          
+	          <div class="selectDiv">
+	            <label for="test2">Port:</label><input type="text" name="test" value="5432" style="width: 5em;" />
+	          </div>
+	          
+	          
+	          <div><input type="checkbox" name="x" id="x"><label for="x">1</label></input></div>
+	          <div><input type="checkbox" name="x" id="x"><label for="x">2</label></input></div>
+	          <div><input type="checkbox" name="x" id="x"><label for="x">3</label></input></div>
+	          <div><input type="checkbox" name="x" id="x"><label for="x">4</label></input></div>
+	          
+	          
+	          
+	        </form>
+		      
+		      <br/>
+		      
+	        
+	      </div>
+	      
+	      <button onclick="open('mainMenu.rml')">Back</button>
+	      
+		  </div>
+		  
+		  
+		</div>
+		
+		
+	</body>
+</rml>

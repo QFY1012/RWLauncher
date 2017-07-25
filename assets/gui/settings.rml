@@ -1,0 +1,396 @@
+<rml>
+	<head>
+		<title>Settings</title>
+		<link type="text/rcss" href="rkt.rcss"/>
+		<link type="text/rcss" href="common.rcss"/>
+		<link type="text/rcss" href="forms.rcss"/>
+		<style>
+			
+			body
+	    {
+		    /*width: 680px;*/
+		    
+		    width: 80%;
+		    height: 525px;
+		    /*height: 100%;*/
+		    
+		    
+		    font-size: 25;
+		    
+		    
+		    height: 70%;
+		    
+		  }
+			
+			
+			.background
+      {
+        /*background:rgba(205,205,205,150);*/
+        
+        background:rgba(205,205,205,0);
+        
+        /*padding:13px;
+        padding-right:40px;
+        */
+        
+      }
+      
+      
+		  h2
+	    {
+	      font-size: 35;
+        font-weight:bold;
+        
+        text-align:center;
+        
+        display:block;
+	    }
+	
+      h3
+      {
+        font-size: 30;
+	      color:black;
+	      font-weight:bold;
+	      
+	      header-font-effect: shadow;
+	      
+	      header-width: 2px;
+	      
+        header-offset: 2px 2px;
+        header-color: gray;
+        
+        display:block;
+        
+        border-bottom: 3px rgba(0,0,0,128);
+        
+        padding-left:0.6em;
+        
+        margin-bottom:0.5em;
+        margin-top:0.5em;
+        
+        background:rgba(0,100,0,128);
+        
+      }
+			
+			.group
+			{
+			  padding-left:0.5em;
+			  
+			}
+			
+			
+			div
+			{
+			  /*border-style: solid;
+	      border-width: 1px;
+	      border-color: red;*/
+			}
+			
+			
+			.form
+			{
+			  text-align: left;
+			  display: block;
+			  
+			  text-color:black;
+			}
+			
+		  
+		  
+			label
+			{
+			  padding-bottom:0em;
+			  margin-top:0em;
+			  
+			  /*border-style: solid;
+			  border-width: 2px;
+			  border-color: green;*/
+			  
+			  /*display:inline-block;*/
+			  
+        /*vertical-align:middle; */
+        
+			}
+			
+			#scrollDivWrap
+      {
+        /*max-height:500px;*/
+      }
+       
+      #scrollDiv
+      {
+        
+        display:block;
+			  
+			  overflow-y: auto;
+			  
+			  min-height:230px;
+			  /*max-height:470px;*/
+			  max-height:540px;
+			  
+			  max-height:100%;
+			  
+			  width:100%;
+			  /*
+			  border-style: solid;
+			  border-width: 2px;
+			  border-color: red;
+			  */
+			  
+			  margin: 3px;
+			  padding: 3px;
+			  
+      }
+      
+      .sliderDiv input
+      {
+        width:15em;
+      }
+      
+      .audioGroup .sliderDiv label
+      {
+        width:7em;
+			  
+			  text-align:right;
+      }
+      
+
+
+      .mainButtons button
+	    {
+	      margin:6px;
+	    }
+      
+      .whiteText label, .whiteText h2, .whiteText h3
+      {
+        color:white;
+        header-color: black;
+      }
+      
+      .selectDivMouse label
+      {
+        width:6.5em;
+      }
+      
+      .selectDivMouse .boxButtonWrap
+      {
+        margin:10px;
+        float:left;
+        width:300px;
+        
+        
+      }
+      
+      
+		</style>
+	</head>
+	<body onshow="loadSettings()" id="body">
+		
+		
+		<div class="background panelMainNoAlpha whiteText">
+		  
+		    
+		    
+		    <div id="scrollDivWrap">
+		    
+		    <div id="scrollDiv">
+		      
+		      <h2>Settings</h2>
+	        <form class="form">
+	          
+	          
+	          <h3>${i:menus.settings.heading.graphics}</h3>
+	          <div class="group audioGroup">
+	            <!--
+	            <div class="selectDiv">
+	            <label>Resolution:</label>
+	            <select name="slick2dResolution" id="slick2dResolution">
+	              <option value="800x600"   >800x600</option>
+	              <option value="1280x800" selected>1280x800</option>
+	              <option value="1440×900"  >1440x900</option>
+	              <option value="1680×1050" >1680x1050</option>
+	              <option value="1920x1080" >1920x1080</option>
+              </select>
+	            </div>
+	            -->
+	            
+	            
+	            
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" name="slick2dFullScreen" data-settings id="slick2dFullScreen"><label for="fullscreen">Fullscreen (has bugs)</label></input>
+	            </div>
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="showUnitWaypoints"><label for="showUnitWaypoints">${i:menus.settings.option.showUnitWaypoints}</label></input>
+	            </div>
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="showHp"><label for="showHp">${i:menus.settings.option.alwayUnitHealth}</label></input>
+	            </div>
+	            
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="showUnitIcons"><label for="showUnitIcons">${i:menus.settings.option.unitIcons}</label></input>
+	            </div>
+	            
+	            
+	            
+	            <!--
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="renderDoubleScale"><label for="renderDoubleScale">${i:menus.settings.option.halfResolution}</label></input>
+	            </div>
+	            -->
+	            
+	            
+	          </div>
+	          <h3>Input</h3> <!----- Input ----->
+	          <div class="group inputGroup">
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="enableMouseCapture"><label for="enableMouseCapture">Capture mouse while windowed (in-game)</label></input>
+	            </div>
+	            
+	            
+	            <div class="selectDiv wide selectDivMouse">
+	              <label>Keyboard:</label>
+	              <div class="boxButtonWrap">
+	                <button class="boxButton center" onclick="open('settingsKeyBinding.rml')" ><span>Edit Keybinding</span></button>
+	              </div>
+	            </div>
+	            
+	            <div class="selectDiv wide selectDivMouse">
+	            <label>Mouse Orders:</label>
+	            <select id="mouseOrders" data-settings>
+	              <option value="0"  >Auto (Ignore Left vs Right)</option>
+	              <option value="1"  >Left-Selection / Right-Action</option>
+	              <option value="2"  >Left-Action / Right-Selection</option>
+              </select>
+	            </div>
+	            
+	            <div class="selectDiv wide selectDivMouse">
+	            <label>Mouse Building:</label>
+	            <select id="mousePlacement" data-settings>
+	              <option value="1"  >Left-Apply / Right-Cancel</option>
+	              <option value="2"  >Left-Cancel / Right-Apply</option>
+              </select>
+	            </div>
+	            
+	            
+	            <div class="sliderDiv">
+	            <label>${i:menus.settings.option.scrollSpeed}</label><input data-settings id="scrollSpeed" type="range" min="0.2" max="4" value=".7" step="0.05" />
+	            </div>
+	            
+	            <div class="sliderDiv">
+	            <label>Edge scroll</label><input data-settings id="edgeScrollSpeed" type="range" min="0" max="4" value=".7" step="0.05" />
+	            </div>
+	            
+	            
+	            
+	          </div>
+	          <h3>${i:menus.settings.heading.gameplay}</h3> <!----- Gameplay ----->
+	          <div class="group gameplayGroup">
+	            
+	            
+	            <div class="selectDiv">
+	            <label>${i:menus.settings.option.aiDifficulty}</label>
+	            <select id="aiDifficulty" data-settings>
+	              <option value="-2">${i:menus.settings.option.ai.-2}</option>
+	              <option value="-1">${i:menus.settings.option.ai.-1}</option>
+	              <option value="0" selected>${i:menus.settings.option.ai.0}</option>
+	              <option value="1"  >${i:menus.settings.option.ai.1}</option>
+	              <option value="2"  >${i:menus.settings.option.ai.2}</option>
+	              <option value="3"  >${i:menus.settings.option.ai.3}</option>
+              </select>
+	            </div>
+	            
+	            
+	          </div>
+	          <h3>${i:menus.settings.heading.audio}</h3> <!----- Audio ----->
+	          <div class="group audioGroup">
+	            
+	            <!--
+	            <div class="checkboxDiv">
+	              <input type="checkbox" name="enableSounds" data-settings id="enableSounds"><label for="enableSounds">${i:menus.settings.option.enableGameSounds}</label></input>
+	            </div>
+	            -->
+	            
+	            
+	            <div class="sliderDiv">
+	            <label>${i:menus.settings.option.masterVolume}</label><input data-settings id="masterVolume" type="range" min="0" max="1" value="1" step="0.01" />
+	            </div>
+	            
+	            <div class="sliderDiv">
+	            <label>${i:menus.settings.option.gameVolume}</label><input data-settings id="gameVolume" type="range" min="0" max="1" value="1" step="0.01" />
+	            </div>
+	            
+	            <div class="sliderDiv">
+	            <label>${i:menus.settings.option.musicVolume}</label><input data-settings id="musicVolume" type="range" min="0" max="1" value="1" step="0.01" />
+	            </div>
+	            
+	          
+	          </div>
+	          <h3>Misc</h3>
+	          <div class="group">
+	            
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="forceEnglish"><label for="forceEnglish">${i:menus.settings.option.forceEnglish}</label></input>
+	            </div>
+	            
+	            
+                      
+            </div>
+            <h3>${i:menus.settings.heading.developer}</h3>
+            <div class="group">
+            
+            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="showFps"><label for="showFps">${i:menus.settings.option.showFps}</label></input>
+	            </div>
+	            
+	            <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="sendReports"><label for="sendReports">${i:menus.settings.option.sendReports}</label></input>
+	            </div>
+            
+              <div class="checkboxDiv">
+	              <input type="checkbox" data-settings id="liveReloading"><label for="liveReloading">Live Resource Reloading</label></input>
+	            </div>
+            
+            
+            </div>
+            <h3>${i:menus.settings.heading.networking}</h3>
+            <div class="group">
+            
+	            
+	            <div class="inputDiv">
+	              <label for="networkPort">Port Number (default=5123):</label><input type="text" id="networkPort" data-settings style="width: 5em;" />
+	            </div>
+	            
+	          
+	        </div>
+	          
+	          
+	        </form>
+		      
+		      <br/>
+		      
+	        
+	      </div>
+	      
+	      
+	      <div class="mainButtons">
+	        <button onclick="back()">Back</button>
+	        
+	        <button onclick="saveSettings();back()">Save</button>
+	        
+	      </div> 
+	      
+		  </div><!-- scrollDivWrap -->
+		  
+		  
+		</div>
+		
+		
+	</body>
+</rml>

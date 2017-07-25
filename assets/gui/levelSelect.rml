@@ -1,0 +1,216 @@
+<rml>
+	<head>
+		<title>Singleplayer</title>
+		<link type="text/rcss" href="rkt.rcss"/>
+		<link type="text/rcss" href="common.rcss"/>
+		<link type="text/rcss" href="forms.rcss"/>
+		<style>
+			
+			
+			body
+      {
+	      
+	      width: auto;
+	      
+	      max-width:80%;
+	      
+	      height: 525px;
+      }
+			
+			#mapTemplateHolder
+			{
+			  display:none;
+			}
+			
+			/*
+			.map
+			{
+			  float:left;
+			  width:120px;
+			  height:170px;
+			}
+			*/
+			
+			.map
+			{
+			  float:left;
+			  
+			  
+			  /*width:125px;
+			  height:170px;*/
+			  
+			  width:180px;
+			  height:200px;
+			  
+			  /*padding:5px;
+			  margin:5px;*/
+			  
+			  text-align:center;
+			  
+			  
+			  
+			  
+			}
+			
+			.map button
+			{
+			  font-size: 14;
+			  
+			  /*float:left;*/
+			  
+			  header-color: gray;
+			  
+			  /*padding:13px;
+			  margin:5px;*/
+			  
+			  
+			  display:block;
+			  
+			  width:100%;
+			  
+			}
+			
+			.map button img
+			{
+			  border-style: solid;
+			  border-color: rgba( 0%, 0%, 0%, 20%);
+			  border-width: 2px;
+			  
+			  margin:auto;
+			  margin-top:9px;
+			  /*margin-left:7px;*/
+			  /*margin-right:7px;*/
+			  
+			  
+			  
+			  
+			  
+			}
+			
+			.map button:hover img
+			{
+			  border-style: solid;
+			  border-width: 2px;
+			  border-color: red;
+			}
+			
+			
+			
+			
+			.mapImage
+			{
+			  /*width:100px;
+			  height:100px;*/
+			  
+			  
+			  width:170px;
+			  height:170px;
+			}
+			
+			
+			#mapScroll
+			{
+			  display:block;
+			  
+			  overflow-y: auto;
+			  
+			  min-height:250px;
+			  /*max-height:470px;*/
+			  
+			  max-height:100%;
+			  
+			  width:100%;
+			  /*
+			  border-style: solid;
+			  border-width: 2px;
+			  border-color: red;
+			  */
+			  
+			  padding: 7px;
+			}
+			#mapHolder
+			{
+			  /*width:500px;*/
+			  width:100%;
+			  
+			}
+			
+			
+			.savesOnly .map
+			{
+			  
+			  width:100%;
+			  height:auto;
+			  margin:5px;
+			  
+
+			}
+			
+			.savesOnly .mapText
+			{
+			  font-size: 16;
+			  background:rgba(255,255,255,128);
+			  
+			}
+			
+			.savesOnly .mapImage
+			{
+			  display:none;
+			  
+			}
+			
+			
+		</style>
+		<script>
+def CloseLogo():
+	print "test 123"
+		</script>
+	</head>
+	<body onshow="showMaps()">
+		
+		
+		<div class="panelMain">
+		  <div class="mainButtons">
+		  
+		  <div id="mapScroll">
+		  
+	      <div id="mapHolder">
+	        
+	        
+	      </div>
+	    </div>
+	    
+	    <div id="mapTemplateHolder">
+	      <div class="map ">
+          <button onclick="_ONCLICK_" class="">
+            <img class="mapImage" src="_IMG_" />
+            <div class="mapText">_NAME_</div>
+          </button>
+        </div>
+      </div>
+      
+      <!-- startNew('_PATH_')  -->
+    
+      <button class="stealFocus"></button>
+	    <button onclick="back()">Back</button><br />
+	    
+	    
+	    <!--
+	    <p>test</p>
+	    <form>
+	    <input type="text" name="test" value="test123"/>
+	    </form>
+	    -->
+	    
+	    </div>
+		  
+		  <div class="clearDiv"></div>
+		  
+		
+		
+		
+		</div>
+		
+		
+	</body>
+</rml>

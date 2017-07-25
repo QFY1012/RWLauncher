@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:myapp="http://schemas.android.com/apk/res/com.corrodinggames" android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<Gallery android:id="@id/quickhelp_gallery" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+	<LinearLayout android:gravity="center" android:id="@id/quickhelp_outerlayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<ImageView android:id="@id/quickhelp_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+	</LinearLayout>
+</LinearLayout>
